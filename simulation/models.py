@@ -50,12 +50,15 @@ class Predator(Creature):
 
 
 class Map:
-
     def __init__(self):
         self._creatures = set()
 
+    @property
+    def creatures(self):
+        return self._creatures
+
     def add_creature(self, creature):
-        self._creatures.add()
+        self._creatures.add(creature)
 
     def kill_creature(self, creature):
         self._creatures.remove(creature)
